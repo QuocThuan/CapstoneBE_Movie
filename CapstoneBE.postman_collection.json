@@ -1,0 +1,743 @@
+{
+	"info": {
+		"_postman_id": "f0e846c1-cf3a-4742-b7f4-4e2cbfacc14f",
+		"name": "CapstoneBE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29073592"
+	},
+	"item": [
+		{
+			"name": "Đăng ký",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"taiKhoan\": \"abc1234\",\r\n  \"matKhau\": \"string1234\",\r\n  \"email\": \"string1234@gmail.com\",\r\n  \"soDt\": \"0987654321\",\r\n  \"maNhom\": \"admin\",\r\n  \"hoTen\": \"string1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/dangKy",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"dangKy"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Đăng nhập",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"matKhau\": \"string1234\",\r\n  \"email\": \"string1234@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/dangNhap",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"dangNhap"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lấy danh sách loại người dùng",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/user/LayDanhSachLoaiNguoiDung",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"LayDanhSachLoaiNguoiDung"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lấy danh sách người dùng",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/user/LayDanhSachNguoiDung",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"LayDanhSachNguoiDung"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lấy danh sách banner",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/movie/LayDanhSachBanner",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"movie",
+						"LayDanhSachBanner"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lấy danh sách phim",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/movie/LayDanhSachPhim",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"movie",
+						"LayDanhSachPhim"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lấy thông tin hệ thống rạp",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/rap/LayThongTinHeThongRap?maHeThongRap=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"rap",
+						"LayThongTinHeThongRap"
+					],
+					"query": [
+						{
+							"key": "maHeThongRap",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lấy thông tin cụm rạp theo hệ thống",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/rap/LayThongTinCumRapTheoHeThong",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"rap",
+						"LayThongTinCumRapTheoHeThong"
+					],
+					"query": [
+						{
+							"key": "maHeThongRap",
+							"value": "2",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lấy thông tin lịch chiếu theo hệ thống rạp",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/rap/LayThongTinLichChieuHeThongRap?maHeThongRap=7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"rap",
+						"LayThongTinLichChieuHeThongRap"
+					],
+					"query": [
+						{
+							"key": "maHeThongRap",
+							"value": "7"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lấy thông tin lịch chiếu phim",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/rap/LayThongTinLichChieuPhim?maPhim=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"rap",
+						"LayThongTinLichChieuPhim"
+					],
+					"query": [
+						{
+							"key": "maPhim",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lấy danh sách người dùng phân trang",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/user/LayDanhSachNguoiDungPhanTrang?soTrang=1&soPhanTuTranTrang=5&=",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"LayDanhSachNguoiDungPhanTrang"
+					],
+					"query": [
+						{
+							"key": "soTrang",
+							"value": "1"
+						},
+						{
+							"key": "soPhanTuTranTrang",
+							"value": "5"
+						},
+						{
+							"key": "",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tìm kiếm người dùng phân trang",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/user/TimKiemNguoiDungPhanTrang?soTrang=1&soPhanTuTranTrang=5&tuKhoa=thi",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"TimKiemNguoiDungPhanTrang"
+					],
+					"query": [
+						{
+							"key": "soTrang",
+							"value": "1"
+						},
+						{
+							"key": "soPhanTuTranTrang",
+							"value": "5"
+						},
+						{
+							"key": "tuKhoa",
+							"value": "thi"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tìm kiếm người dùng",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/user/TimKiemNguoiDung?tuKhoa=van",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"TimKiemNguoiDung"
+					],
+					"query": [
+						{
+							"key": "tuKhoa",
+							"value": "van"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lấy thông tin phim",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/movie/LayThongTinPhim?maPhim=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"movie",
+						"LayThongTinPhim"
+					],
+					"query": [
+						{
+							"key": "maPhim",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lấy thông tin người dùng",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuZ3VvaV9kdW5nX2lkIjo5LCJob19UZW4iOiJzdHJpbmcxMjMiLCJrZXkiOjE3MTcyMjc1ODYyNTIsImlhdCI6MTcxNzIyNzU4NiwiZXhwIjoxNzE3NDg2Nzg2fQ.sNwsLJKU0zkU7eEby0KindGLhS61ry2t5_sVUQzAok4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/user/LayThongTinNguoiDung",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"LayThongTinNguoiDung"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lấy danh sách phim phân trang",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/movie/LayDanhSachPhimPhanTrang?soTrang=1&soPhanTuTranTrang=5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"movie",
+						"LayDanhSachPhimPhanTrang"
+					],
+					"query": [
+						{
+							"key": "soTrang",
+							"value": "1"
+						},
+						{
+							"key": "soPhanTuTranTrang",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lấy danh sách phim theo ngày",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/movie/LayDanhSachPhimTheoNgay?soTrang=1&soPhanTuTranTrang=5&tuNgay=1994-10-14&denNgay&tenPhim=",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"movie",
+						"LayDanhSachPhimTheoNgay"
+					],
+					"query": [
+						{
+							"key": "soTrang",
+							"value": "1"
+						},
+						{
+							"key": "soPhanTuTranTrang",
+							"value": "5"
+						},
+						{
+							"key": "tuNgay",
+							"value": "1994-10-14"
+						},
+						{
+							"key": "denNgay",
+							"value": null
+						},
+						{
+							"key": "tenPhim",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cập nhật phim",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuZ3VvaV9kdW5nX2lkIjozMSwiaG9fVGVuIjoic3RyaW5nMTIzNCIsImxvYWlfbmd1b2lfZHVuZyI6ImFkbWluIiwia2V5IjoxNzE3MjMyOTc3MDIzLCJpYXQiOjE3MTcyMzI5NzcsImV4cCI6MTcxNzQ5MjE3N30.Fe_Epa2gZ63LtkbFr1RiBo8nxkhDp1Ebdli1ew4tlh8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ten_phim\": \"The Eras Tours \"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/movie/CapNhatPhimUpload?maPhim=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"movie",
+						"CapNhatPhimUpload"
+					],
+					"query": [
+						{
+							"key": "maPhim",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Xóa phim",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuZ3VvaV9kdW5nX2lkIjozMSwiaG9fVGVuIjoic3RyaW5nMTIzNCIsImxvYWlfbmd1b2lfZHVuZyI6ImFkbWluIiwia2V5IjoxNzE3MjMyOTc3MDIzLCJpYXQiOjE3MTcyMzI5NzcsImV4cCI6MTcxNzQ5MjE3N30.Fe_Epa2gZ63LtkbFr1RiBo8nxkhDp1Ebdli1ew4tlh8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/movie/XoaPhim?maPhim=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"movie",
+						"XoaPhim"
+					],
+					"query": [
+						{
+							"key": "maPhim",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Xóa người dùng",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuZ3VvaV9kdW5nX2lkIjozMSwiaG9fVGVuIjoic3RyaW5nMTIzNCIsImxvYWlfbmd1b2lfZHVuZyI6ImFkbWluIiwia2V5IjoxNzE3MjMyOTc3MDIzLCJpYXQiOjE3MTcyMzI5NzcsImV4cCI6MTcxNzQ5MjE3N30.Fe_Epa2gZ63LtkbFr1RiBo8nxkhDp1Ebdli1ew4tlh8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/user/XoaNguoiDung?id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"XoaNguoiDung"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lấy danh sách phòng vé",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/dat-ve/LayDanhSachPhongVe?maLichChieu=7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"dat-ve",
+						"LayDanhSachPhongVe"
+					],
+					"query": [
+						{
+							"key": "maLichChieu",
+							"value": "7"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cập nhật thông tin người dùng",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuZ3VvaV9kdW5nX2lkIjozMSwiaG9fVGVuIjoic3RyaW5nMTIzNCIsImxvYWlfbmd1b2lfZHVuZyI6ImFkbWluIiwia2V5IjoxNzE3MjMyOTc3MDIzLCJpYXQiOjE3MTcyMzI5NzcsImV4cCI6MTcxNzQ5MjE3N30.Fe_Epa2gZ63LtkbFr1RiBo8nxkhDp1Ebdli1ew4tlh8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"taiKhoan\": \"nguyenvana\",\r\n  \"matKhau\": \"hashed_nguyenvana_password\",\r\n  \"email\": \"nguyenvana@example.com\",\r\n  \"soDt\": \"0123456789\",\r\n  \"maNhom\": \"user\",\r\n  \"hoTen\": \"Nguyễn Văn A\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/CapNhatThongTinNguoiDung",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"CapNhatThongTinNguoiDung"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tạo lịch chiếu",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"maPhim\": 9,\r\n  \"ngayChieuGioChieu\": \"06/02/2024 14:00:00\",\r\n  \"maRap\":3,\r\n  \"giaVe\": 100000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/dat-ve/TaoLichChieu",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"dat-ve",
+						"TaoLichChieu"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Đặt vé",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"maLichChieu\": 3,\r\n  \"danhSachVe\": [\r\n    {\r\n      \"maGhe\": 2,\r\n      \"nguoi_dung_id\": 2\r\n    },\r\n    {\r\n      \"maGhe\": 3,\r\n      \"nguoi_dung_id\": 3\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/dat-ve/DatVe",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"dat-ve",
+						"DatVe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tạo phim",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuZ3VvaV9kdW5nX2lkIjozMSwiaG9fVGVuIjoic3RyaW5nMTIzNCIsImxvYWlfbmd1b2lfZHVuZyI6ImFkbWluIiwia2V5IjoxNzE3MjMyOTc3MDIzLCJpYXQiOjE3MTcyMzI5NzcsImV4cCI6MTcxNzQ5MjE3N30.Fe_Epa2gZ63LtkbFr1RiBo8nxkhDp1Ebdli1ew4tlh8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/DELL/OneDrive/Máy tính/home/public/images/crypto/avtBanner1.png"
+						},
+						{
+							"key": "tenPhim",
+							"value": "Hihi",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/movie/TaoPhim",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"movie",
+						"TaoPhim"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
